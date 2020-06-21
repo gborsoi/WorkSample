@@ -1,0 +1,40 @@
+public class Wsample2 {
+	
+	
+	public static void main(String [] args){
+		
+		double[] frete = {5, 9, 12, 16, 20, 24, 28, 32}; //Nessa linha inserimos as faixas de valor de frete 
+		                                                 //(pelo exemplo dado assumi uma faixa crescente de R$4,00 a cada quilo); 
+														 //Podem ser adiconados mais ou menos valores. 
+				
+		double[] pesoiten = {1.5, 1.2, 1};	// Nessa linha inserimos o peso de cada item dessa compra carrinho em kg
+		                                    // podem ser adicionados quantos valores desejar.
+		
+		double pesototal = 0; 
+		double valorfinal = 0;
+				
+		for (int i=0; i<pesoiten.length; i++){
+			pesototal = pesototal + pesoiten[i];  // Faz a soma do peso de acordo com os valores inseridos em "pesoiten"
+		}	
+		
+		
+			
+		for (int j=0; j<frete.length; j++){    //percorre as faixas de preço de frete
+			
+						
+			if (pesototal <= (j+1)){           // Verifica em qual faixa de preço o pesototal se encontra. 
+			                                   //Como o preço varia a cada Kg, o próprio contador serve para essa validação. 
+											   //É adicionado +1 pois o identificador do array começa em 0 mas a validação começa em 1kg.
+				
+				valorfinal = frete[j];
+			    break;                       //Se o "pesototal" se encaixa na faixa de preço analisada na iteração, 
+				                             //valorfinal recebe essa faixa de preço e o loop é encerrado. Caso contrário ele segue 
+											 //para próxima iteração até a ultima faixa de frete. 
+
+			}
+			 
+		}
+		System.out.println("Peso "+pesototal);   //exibiçaõ para teste
+		System.out.println("Frete "+valorfinal); //exibiçaõ para teste     
+	}
+}
