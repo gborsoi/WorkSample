@@ -3,9 +3,8 @@ public class Wsample2 {
 	
 	public static void main(String [] args){
 		
-		double[] frete = {5, 9, 12, 16, 20, 24, 28, 32}; //Nessa linha inserimos as faixas de valor de frete 
-		                                                 //(pelo exemplo dado assumi uma faixa crescente de R$4,00 a cada quilo); 
-								 //Podem ser adiconados mais ou menos valores. 
+		double[] frete = {5, 9, 12, 18};       //Nessa linha inserimos as faixas de valor de frete 
+		                                        //Podem ser adiconados mais ou menos valores. 
 				
 		double[] pesoiten = {1.5, 1.2, 1};	// Nessa linha inserimos o peso de cada item dessa compra carrinho em kg
 		                                       // podem ser adicionados quantos valores desejar.
